@@ -1,0 +1,49 @@
+<footer class="pie">
+  <div class="wrap pie__rejilla">
+    <div class="pie__marca">
+      <a class="pie__logo" href="/" aria-label="El Patio Beach Club, ir al inicio" data-i18n-attr="aria-label">{{logo_pie}}</a>
+      <p data-i18n>Restaurante y lounge en la arena de la bahía de Bayahíbe. Mariscos, cócteles y el mejor atardecer del pueblo.</p>
+      <address class="pie__direccion">{{calle}}, {{sector}}<br>{{ciudad}}, {{provincia}}</address>
+    </div>
+    <div class="pie__bloque">
+      <h2 class="pie__titulo" data-i18n>Horario</h2>
+      {{horario_corto}}
+      <p class="estado estado--claro" data-estado><span class="estado__punto" aria-hidden="true"></span><span class="estado__texto" data-estado-corto>Abierto todos los días</span></p>
+    </div>
+    <div class="pie__bloque">
+      <h2 class="pie__titulo" data-i18n>Contacto</h2>
+      <ul class="pie__lista">
+        <li><a href="https://wa.me/{{wa}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp {{tel_texto}}</a></li>
+        <li><a href="tel:{{tel}}"><svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg><span data-i18n>Llamar</span></a></li>
+        <li><a href="{{instagram}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-ig"/></svg>{{instagram_usuario}}</a></li>
+        <li><a href="{{maps}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-ruta"/></svg><span data-i18n>Cómo llegar</span></a></li>
+      </ul>
+    </div>
+    <div class="pie__bloque pie__qr">
+      <h2 class="pie__titulo" data-i18n>En tu teléfono</h2>
+      <div class="pie__qr-caja">{{qr}}</div>
+      <p class="pie__nota" data-i18n>Escanea y abre esta página en tu celular.</p>
+    </div>
+  </div>
+  <div class="wrap pie__base">
+    <p data-i18n>Propuesta de sitio web preparada para El Patio Beach Club.</p>
+    <p class="pie__creditos"><span data-i18n>Fotos: El Patio Beach Club (Instagram y Tripadvisor).</span> <span>Mapa © OpenStreetMap.</span></p>
+  </div>
+</footer>
+
+<nav class="barra" aria-label="Acciones rápidas" data-i18n-attr="aria-label" data-barra>
+  <button class="barra__item barra__item--principal" type="button" data-abrir-reserva>
+    <svg class="icono" aria-hidden="true"><use href="#i-calendario"/></svg><span data-i18n>Reservar</span>
+  </button>
+  <a class="barra__item" href="/carta/"{{cur:carta}}>
+    <svg class="icono" aria-hidden="true"><use href="#i-carta"/></svg><span data-i18n>Carta</span>
+  </a>
+  <a class="barra__item" href="{{maps}}" target="_blank" rel="noopener">
+    <svg class="icono" aria-hidden="true"><use href="#i-ruta"/></svg><span data-i18n>Llegar</span>
+  </a>
+  <a class="barra__item" href="https://wa.me/{{wa}}" target="_blank" rel="noopener">
+    <svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span>
+  </a>
+</nav>
+
+{{> dialogos}}

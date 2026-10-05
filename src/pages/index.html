@@ -1,0 +1,286 @@
+---
+titulo: El Patio Beach Club · Restaurante en la playa de Bayahíbe
+og_titulo: El Patio Beach Club · El atardecer de Bayahíbe desde tu mesa
+descripcion: Restaurante y lounge en la arena de la bahía de Bayahíbe. Paella de mariscos, langosta, pescado del día y cócteles frente al atardecer. Reserva tu mesa por WhatsApp.
+ruta: /
+salida: index.html
+pagina: inicio
+preload: atardecer-bahia-movil|100vw|(max-width: 767px) ; atardecer-bahia|100vw|(min-width: 768px)
+---
+{{> head}}
+<body class="pagina-inicio">
+{{> header}}
+<main id="contenido">
+
+  <section class="hero" aria-labelledby="hero-titulo">
+    {{picture nombre="atardecer-bahia" movil="atardecer-bahia-movil" sizes="100vw" alt="Atardecer naranja sobre la bahía de Bayahíbe, con catamaranes y lanchas fondeados frente a El Patio." clase="hero__foto"}}
+    <div class="wrap hero__contenido">
+      <p class="ceja ceja--sol">{{calle}} · <span data-i18n>Playa de Bayahíbe</span></p>
+      <h1 class="hero__titulo" id="hero-titulo" data-i18n="html">El atardecer de Bayahíbe <em>se ve desde tu mesa.</em></h1>
+      <p class="hero__texto" data-i18n>Restaurante y lounge con los pies en la arena: paella de mariscos, langosta, pescado del día y cócteles frente a la bahía.</p>
+      <div class="hero__pastillas">
+        <p class="estado estado--hero" data-estado><span class="estado__punto" aria-hidden="true"></span><span class="estado__texto" data-estado-texto>Abierto todos los días</span></p>
+        <p class="pastilla-sol" data-atardecer-hoy><svg class="icono" aria-hidden="true"><use href="#i-sol"/></svg><span data-atardecer-texto>Atardecer de hoy</span></p>
+      </div>
+      <div class="hero__ctas">
+        <button class="boton boton--accion" type="button" data-abrir-reserva><svg class="icono" aria-hidden="true"><use href="#i-calendario"/></svg><span data-i18n>Reservar mesa</span></button>
+        <a class="boton boton--vidrio" href="/carta/"><svg class="icono" aria-hidden="true"><use href="#i-carta"/></svg><span data-i18n>Ver la carta</span></a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rapidas" aria-label="Contacto rápido" data-i18n-attr="aria-label">
+    <a href="https://wa.me/{{wa}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+    <a href="tel:{{tel}}"><svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg><span data-i18n>Llamar</span></a>
+    <a href="{{maps}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-ruta"/></svg><span data-i18n>Cómo llegar</span></a>
+    <a href="{{instagram}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-ig"/></svg><span>Instagram</span></a>
+  </nav>
+
+  <section class="seccion seccion--mar atardecer" id="atardecer" aria-labelledby="sol-titulo" data-atardecer>
+    <div class="wrap atardecer__rejilla">
+      <div class="atardecer__texto">
+        <p class="ceja ceja--sol" data-i18n>El reloj de la bahía</p>
+        <h2 class="titulo" id="sol-titulo" data-i18n>El atardecer de hoy</h2>
+        <p class="atardecer__hora"><span class="sr-only" data-i18n>El sol se pone a las</span> <span data-sol-puesta>6:20 p. m.</span></p>
+        <p class="atardecer__falta" data-sol-falta aria-live="polite"></p>
+        <p class="atardecer__consejo" data-sol-consejo></p>
+        <div class="atardecer__acciones">
+          <button class="boton boton--accion" type="button" data-reservar-atardecer><svg class="icono" aria-hidden="true"><use href="#i-sol"/></svg><span data-i18n>Reservar para el atardecer</span></button>
+          <div class="atardecer__otro">
+            <label for="sol-fecha" data-i18n>¿Vienes otro día?</label>
+            <input id="sol-fecha" type="date" data-sol-fecha>
+          </div>
+        </div>
+      </div>
+      <figure class="horizonte">
+        <svg class="horizonte__svg" viewBox="0 0 640 300" role="img" aria-labelledby="horizonte-desc" data-horizonte>
+          <title id="horizonte-desc" data-sol-resumen>Recorrido del sol sobre la bahía de Bayahíbe hoy.</title>
+          <defs>
+            <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E3B4B"/><stop offset="1" stop-color="#145A6C"/></linearGradient>
+            <radialGradient id="brillo"><stop offset="0" stop-color="#F6B33D" stop-opacity=".55"/><stop offset="1" stop-color="#F6B33D" stop-opacity="0"/></radialGradient>
+          </defs>
+          <path class="horizonte__arco" d="M48 214 Q320 -110 592 214" pathLength="100"/>
+          <path class="horizonte__recorrido" d="M48 214 Q320 -110 592 214" pathLength="100" data-sol-recorrido/>
+          <g class="horizonte__barcos" aria-hidden="true">
+            <path d="M412 214l18-40v40zM432 214l14-30 2 30z"/>
+            <path d="M150 214l12-28v28zM164 214l10-20 1 20z"/>
+          </g>
+          <line class="horizonte__linea" x1="0" y1="214" x2="640" y2="214"/>
+          <g class="horizonte__agua" aria-hidden="true">
+            <path d="M40 236h120M220 236h90M380 236h150M90 256h90M260 256h160M480 256h80M150 276h120M330 276h70"/>
+          </g>
+          <circle class="horizonte__brillo" r="46" cx="-100" cy="-100" data-sol-brillo/>
+          <circle class="horizonte__sol" r="15" cx="-100" cy="-100" data-sol-punto/>
+          <text class="horizonte__etiqueta" x="48" y="292" text-anchor="start" data-sol-sale-txt>Sale 6:25 a. m.</text>
+          <text class="horizonte__etiqueta" x="592" y="292" text-anchor="end" data-sol-pone-txt>Se pone 6:20 p. m.</text>
+        </svg>
+        <figcaption class="horizonte__pie" data-i18n>Calculado para las coordenadas de El Patio, frente a la bahía.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="seccion seccion--espuma" id="del-mar" aria-labelledby="fav-titulo">
+    <div class="wrap">
+      <div class="encabezado encabezado--fila">
+        <div>
+          <p class="ceja" data-i18n>Del mar a la mesa</p>
+          <h2 class="titulo" id="fav-titulo" data-i18n>Lo que se pide frente al agua</h2>
+        </div>
+        <div class="flechas" data-flechas>
+          <button class="boton-icono boton-icono--borde" type="button" data-ant aria-label="Ver anteriores" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-izq"/></svg></button>
+          <button class="boton-icono boton-icono--borde" type="button" data-sig aria-label="Ver siguientes" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-der"/></svg></button>
+        </div>
+      </div>
+      <div class="carrusel" data-carrusel>
+        <ul class="carrusel__pista" data-pista>
+          {{favoritos ids="paella-mariscos,langosta-parrilla,pescado-frito,calamares-fritos"}}
+        </ul>
+        <div class="carrusel__progreso" aria-hidden="true"><span data-progreso></span></div>
+      </div>
+      <div class="del-mar__pie">
+        <a class="enlace-flecha" href="/carta/"><span data-i18n>Ver la carta completa</span><svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        {{nota_precios}}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--arena lugar" id="lugar" aria-labelledby="lugar-titulo">
+    <div class="wrap">
+      <div class="encabezado">
+        <p class="ceja" data-i18n>El lugar</p>
+        <h2 class="titulo" id="lugar-titulo" data-i18n>Aquí el patio es la playa</h2>
+        <p class="encabezado__texto" data-i18n>Mesas bajo el techo de cana, tumbonas en la arena y, enfrente, la bahía donde fondean los barcos. Se almuerza descalzo y se cena con el agua a unos pasos.</p>
+      </div>
+      <div class="lugar__mosaico">
+        <figure class="lugar__foto lugar__foto--grande">
+          {{img nombre="mesas-frente-al-mar" alt="Mesas montadas bajo el techo de cana, abiertas a la playa y al mar turquesa." sizes="(min-width: 1024px) 60vw, 100vw"}}
+          <figcaption data-i18n>Bajo el techo de cana, abierto a la playa.</figcaption>
+        </figure>
+        <figure class="lugar__foto">
+          {{img nombre="playa-tumbonas" alt="Tumbonas blancas en la arena, bajo las palmas, frente a la playa de Bayahíbe." sizes="(min-width: 1024px) 30vw, 50vw"}}
+          <figcaption data-i18n>Tumbonas en la arena.</figcaption>
+        </figure>
+        <figure class="lugar__foto">
+          {{img nombre="bahia-barcos" alt="Agua turquesa de la bahía de Bayahíbe con lanchas fondeadas, vista desde El Patio." sizes="(min-width: 1024px) 30vw, 50vw"}}
+          <figcaption data-i18n>La bahía, a unos pasos.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="saona" aria-labelledby="saona-titulo">
+    <div class="wrap saona__fila">
+      <svg class="saona__icono" aria-hidden="true"><use href="#i-ola"/></svg>
+      <div class="saona__texto">
+        <h2 id="saona-titulo" data-i18n>¿Vuelves de Isla Saona o de Catalina?</h2>
+        <p data-i18n>Los barcos de excursión salen y regresan a esta misma bahía. Camina por la playa hasta El Patio y siéntate con los pies en la arena: almuerzo, cerveza fría y la tarde por delante.</p>
+      </div>
+      <button class="boton boton--contorno" type="button" data-abrir-reserva data-ocasion="Grupo de excursión"><span data-i18n>Reservar para el grupo</span></button>
+    </div>
+  </section>
+
+  <section class="seccion seccion--mar resenas" id="resenas" aria-labelledby="resenas-titulo">
+    <div class="wrap resenas__rejilla">
+      <div class="resenas__intro">
+        <p class="ceja ceja--sol" data-i18n>Lo que dicen</p>
+        <h2 class="titulo" id="resenas-titulo" data-i18n>«El mejor lugar para ver el atardecer»</h2>
+        <ul class="notas">
+          <li><strong>4.1</strong> <span data-i18n>de 5 en Google Maps</span></li>
+          <li><strong>4.1</strong> <span data-i18n>de 5 en Tripadvisor · 52 opiniones</span></li>
+        </ul>
+        <p class="resenas__fuente" data-i18n>Consultado el 5 de octubre de 2026. En Tripadvisor la ficha aparece con el nombre anterior, El Patio Lounge Bar.</p>
+      </div>
+      <ul class="citas">
+        <li class="cita" data-solo="es">
+          <blockquote><p>«Comida increíble y buen ambiente, la playa justo enfrente. El mejor lugar para ver el atardecer.»</p></blockquote>
+          <p class="cita__autor">Lulu · Google · enero de 2021 · <span class="cita__trad">traducida del inglés</span></p>
+        </li>
+        <li class="cita" data-solo="es">
+          <blockquote><p>«Pescado fresco, langosta y mariscos excepcionales. A orillas del mar Caribe.»</p></blockquote>
+          <p class="cita__autor">Nerio T · Tripadvisor · marzo de 2025 · <span class="cita__trad">traducida del italiano</span></p>
+        </li>
+        <li class="cita" data-solo="es">
+          <blockquote><p>«Muy buena comida y un servicio genial. Comimos paella y pescado, ¡deliciosos!»</p></blockquote>
+          <p class="cita__autor">Jennykola · Tripadvisor · enero de 2023 · <span class="cita__trad">traducida del inglés</span></p>
+        </li>
+        <li class="cita" data-solo="en">
+          <blockquote><p>“Amazing food and environment, the beach is right in front. The best place to watch the sunset.”</p></blockquote>
+          <p class="cita__autor">Lulu · Google · January 2021</p>
+        </li>
+        <li class="cita" data-solo="en">
+          <blockquote><p>“This place is quaint and rather romantic right off the water. Drinks were good (try the Mai Tai).”</p></blockquote>
+          <p class="cita__autor">Tanya H · Tripadvisor · March 2016</p>
+        </li>
+        <li class="cita" data-solo="en">
+          <blockquote><p>“Very good food and awesome service… we ate paella and fish, delicious!”</p></blockquote>
+          <p class="cita__autor">Jennykola · Tripadvisor · January 2023</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion seccion--espuma eventos-teaser" aria-labelledby="ev-titulo">
+    <div class="wrap eventos-teaser__rejilla">
+      <figure class="eventos-teaser__foto">
+        {{img nombre="evento-cena-blanca" alt="Cena de evento con invitados vestidos de blanco, mesas largas bajo los árboles y luces." sizes="(min-width: 1024px) 45vw, 100vw"}}
+      </figure>
+      <div class="eventos-teaser__texto">
+        <p class="ceja" data-i18n>Eventos</p>
+        <h2 class="titulo" id="ev-titulo" data-i18n>Celebra con la bahía de fondo</h2>
+        <p data-i18n>Cumpleaños, cenas de empresa, fiestas temáticas como la cena blanca o el grupo de la excursión. Te armamos el espacio, el menú y la hora para que la foto salga con el atardecer.</p>
+        <a class="boton boton--accion" href="/eventos/"><span data-i18n>Ver eventos</span><svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--arena galeria-adelanto" aria-labelledby="gal-titulo">
+    <div class="wrap">
+      <div class="encabezado encabezado--fila">
+        <div>
+          <p class="ceja" data-i18n>Galería</p>
+          <h2 class="titulo" id="gal-titulo" data-i18n>Un día en El Patio</h2>
+        </div>
+        <a class="enlace-flecha" href="/galeria/"><span data-i18n>Ver todas las fotos</span><svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+      </div>
+      <ul class="mosaico" data-galeria>
+        {{galeria ids="copas-atardecer,paella-mariscos,playa-tumbonas,langosta-parrilla,atardecer-barcos,mesa-vista-mar" modo="adelanto"}}
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion seccion--espuma preguntas" id="preguntas" aria-labelledby="faq-titulo">
+    <div class="wrap dos-columnas">
+      <div class="dos-columnas__intro">
+        <p class="ceja" data-i18n>Antes de venir</p>
+        <h2 class="titulo" id="faq-titulo" data-i18n>Preguntas frecuentes</h2>
+        <p data-i18n>¿Algo más? Escríbenos por WhatsApp y te respondemos.</p>
+        <a class="boton boton--whatsapp" href="https://wa.me/{{wa}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n>Escribir por WhatsApp</span></a>
+      </div>
+      <div class="faq">
+        <details>
+          <summary data-i18n>¿A qué hora es el atardecer?</summary>
+          <p data-i18n>Depende del mes: en Bayahíbe el sol se pone cerca de las 6:00 p. m. a finales de noviembre y hasta las 7:15 p. m. a principios de julio. En esta misma página te decimos la hora exacta de hoy.</p>
+        </details>
+        <details>
+          <summary data-i18n>¿Hace falta reservar?</summary>
+          <p data-i18n>No es obligatorio. Si quieres una mesa en la arena para ver la puesta del sol, o vienen en grupo, reserva por WhatsApp y te la guardamos.</p>
+        </details>
+        <details>
+          <summary data-i18n>¿Abren todos los días?</summary>
+          <p data-i18n>Sí, de lunes a domingo, desde las 10:00 a. m. hasta la medianoche.</p>
+        </details>
+        <details>
+          <summary data-i18n>¿Cómo llego?</summary>
+          <p data-i18n>Estamos en la calle La Bahía #17, en la playa del pueblo de Bayahíbe, la misma de donde salen los barcos a Saona. Toca «Cómo llegar» y Google Maps o Waze te llevan hasta la puerta.</p>
+        </details>
+        <details>
+          <summary data-i18n>¿Organizan eventos y grupos?</summary>
+          <p data-i18n>Sí: cumpleaños, cenas de empresa, fiestas temáticas y grupos que regresan de excursión. Mira la página de eventos o escríbenos con la fecha y cuántos son.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--arena ubicacion" id="llegar" aria-labelledby="ubi-titulo">
+    <div class="wrap dos-columnas dos-columnas--ubicacion">
+      <div class="ubicacion__datos">
+        <p class="ceja" data-i18n>Cómo llegar</p>
+        <h2 class="titulo" id="ubi-titulo" data-i18n>En la arena de la bahía de Bayahíbe</h2>
+        <p class="ubicacion__dir">{{calle}}, {{ciudad}}, {{provincia}}. <span data-i18n>En la playa del pueblo, donde fondean los barcos de excursión.</span></p>
+        <div class="horario">
+          <div class="horario__cabeza">
+            <h3 data-i18n>Horario</h3>
+            <p class="estado" data-estado><span class="estado__punto" aria-hidden="true"></span><span class="estado__texto" data-estado-texto>Abierto todos los días</span></p>
+          </div>
+          {{horario_tabla}}
+        </div>
+        <div class="ubicacion__botones">
+          <a class="boton boton--accion" href="{{maps}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-ruta"/></svg><span data-i18n>Cómo llegar</span></a>
+          <a class="boton boton--contorno" href="{{waze}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-mapa"/></svg><span data-i18n>Abrir en Waze</span></a>
+          <a class="boton boton--contorno" href="https://wa.me/{{wa}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+        </div>
+      </div>
+      <div class="mapa" data-mapa>
+        <img class="mapa__img" src="/assets/img/mapa-800.webp" srcset="/assets/img/mapa-800.webp 800w, /assets/img/mapa-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="1200" height="720" loading="lazy" decoding="async" alt="Mapa: El Patio Beach Club en la orilla de la bahía de Bayahíbe, sobre la calle La Bahía." data-i18n-attr="alt">
+        <button class="boton boton--claro mapa__boton" type="button" data-cargar-mapa><svg class="icono" aria-hidden="true"><use href="#i-mapa"/></svg><span data-i18n>Ver mapa interactivo</span></button>
+        <p class="mapa__credito">© OpenStreetMap</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre" aria-labelledby="cierre-titulo">
+    {{img nombre="copas-atardecer" alt="" sizes="100vw" clase="cierre__foto"}}
+    <div class="wrap cierre__contenido">
+      <h2 class="cierre__titulo" id="cierre-titulo" data-i18n>¿Te guardamos una mesa para el atardecer?</h2>
+      <p class="cierre__sol" data-atardecer-hoy><svg class="icono" aria-hidden="true"><use href="#i-sol"/></svg><span data-atardecer-texto>Atardecer de hoy</span></p>
+      <div class="cierre__ctas">
+        <button class="boton boton--accion" type="button" data-reservar-atardecer><svg class="icono" aria-hidden="true"><use href="#i-calendario"/></svg><span data-i18n>Reservar mesa</span></button>
+        <a class="boton boton--vidrio" href="https://wa.me/{{wa}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n>Escribir por WhatsApp</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{{> footer}}
+</body>
+</html>

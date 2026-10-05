@@ -1,0 +1,47 @@
+<a class="saltar" href="#contenido" data-i18n>Saltar al contenido</a>
+{{> iconos}}
+<header class="cabecera" data-cabecera>
+  <div class="wrap cabecera__fila">
+    <a class="cabecera__logo" href="/" aria-label="El Patio Beach Club, ir al inicio" data-i18n-attr="aria-label">{{logo}}</a>
+    <nav class="cabecera__nav" aria-label="Principal" data-i18n-attr="aria-label">
+      <a href="/carta/"{{cur:carta}} data-i18n>La carta</a>
+      <a href="/eventos/"{{cur:eventos}} data-i18n>Eventos</a>
+      <a href="/galeria/"{{cur:galeria}} data-i18n>Galería</a>
+      <a href="/#llegar" data-i18n>Cómo llegar</a>
+    </nav>
+    <div class="cabecera__acciones">
+      <p class="estado estado--cabecera" data-estado><span class="estado__punto" aria-hidden="true"></span><span class="estado__texto" data-estado-corto>Abierto todos los días</span></p>
+      <a class="idioma" href="?lang=en" data-idioma hreflang="en" lang="en" aria-label="Read in English">EN</a>
+      <button class="boton boton--accion boton--chico cabecera__reservar" type="button" data-abrir-reserva>
+        <svg class="icono" aria-hidden="true"><use href="#i-calendario"/></svg><span data-i18n>Reservar mesa</span>
+      </button>
+      <button class="cabecera__menu" type="button" aria-haspopup="dialog" aria-controls="hoja-nav" data-abrir-nav>
+        <svg class="icono" aria-hidden="true"><use href="#i-menu"/></svg><span data-i18n>Menú</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<dialog class="hoja-nav" id="hoja-nav" aria-label="Menú del sitio" data-i18n-attr="aria-label">
+  <div class="hoja-nav__cuerpo">
+    <div class="hoja-nav__arriba">
+      <p class="estado estado--claro" data-estado><span class="estado__punto" aria-hidden="true"></span><span class="estado__texto" data-estado-texto>Abierto todos los días</span></p>
+      <button class="boton-icono" type="button" data-cerrar aria-label="Cerrar menú" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+    </div>
+    <nav class="hoja-nav__enlaces" aria-label="Secciones" data-i18n-attr="aria-label">
+      <a href="/"{{cur:inicio}}><span class="hoja-nav__titulo" data-i18n>Inicio</span><span class="hoja-nav__sub" data-i18n>En la arena de la bahía de Bayahíbe</span></a>
+      <a href="/carta/"{{cur:carta}}><span class="hoja-nav__titulo" data-i18n>La carta</span><span class="hoja-nav__sub" data-i18n>Paella, langosta y pescado del día</span></a>
+      <a href="/eventos/"{{cur:eventos}}><span class="hoja-nav__titulo" data-i18n>Eventos</span><span class="hoja-nav__sub" data-i18n>Cumpleaños, grupos y cenas frente al mar</span></a>
+      <a href="/galeria/"{{cur:galeria}}><span class="hoja-nav__titulo" data-i18n>Galería</span><span class="hoja-nav__sub" data-i18n>Atardeceres, playa y platos</span></a>
+      <a href="/#llegar"><span class="hoja-nav__titulo" data-i18n>Cómo llegar</span><span class="hoja-nav__sub">{{calle}}, {{ciudad}}</span></a>
+    </nav>
+    <p class="hoja-nav__sol" data-atardecer-hoy><svg class="icono" aria-hidden="true"><use href="#i-sol"/></svg><span data-atardecer-texto>Atardecer de hoy</span></p>
+    <div class="hoja-nav__pie">
+      <button class="boton boton--accion boton--ancho" type="button" data-abrir-reserva><svg class="icono" aria-hidden="true"><use href="#i-calendario"/></svg><span data-i18n>Reservar mesa</span></button>
+      <div class="hoja-nav__contacto">
+        <a class="boton boton--contorno-claro" href="https://wa.me/{{wa}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        <a class="idioma idioma--hoja" href="?lang=en" data-idioma hreflang="en" lang="en">English</a>
+      </div>
+    </div>
+  </div>
+</dialog>

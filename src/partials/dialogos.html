@@ -1,0 +1,81 @@
+<dialog class="dialogo" id="dialogo-reserva" aria-labelledby="reserva-titulo">
+  <form class="dialogo__caja form" method="dialog" novalidate data-form-reserva>
+    <div class="dialogo__cabeza">
+      <div>
+        <h2 class="dialogo__titulo" id="reserva-titulo" data-i18n>Reservar mesa</h2>
+        <p class="dialogo__sub" data-i18n>Te confirmamos por WhatsApp.</p>
+      </div>
+      <button class="boton-icono" type="button" data-cerrar aria-label="Cerrar" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+    </div>
+    <div class="dialogo__cuerpo">
+      <div class="form__fila">
+        <div class="campo">
+          <label for="r-fecha" data-i18n>Fecha</label>
+          <input id="r-fecha" name="fecha" type="date" required aria-describedby="r-fecha-error r-fecha-sol">
+          <p class="campo__ayuda campo__ayuda--sol" id="r-fecha-sol" data-fecha-sol></p>
+          <p class="campo__error" id="r-fecha-error" aria-live="polite"></p>
+        </div>
+        <div class="campo">
+          <label for="r-hora" data-i18n>Hora</label>
+          <select id="r-hora" name="hora" required aria-describedby="r-hora-error r-hora-ayuda"></select>
+          <p class="campo__ayuda" id="r-hora-ayuda" data-hora-ayuda></p>
+          <p class="campo__error" id="r-hora-error" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="form__fila">
+        <div class="campo">
+          <label for="r-personas" data-i18n>Personas</label>
+          <div class="contador" data-contador>
+            <button type="button" class="contador__btn" data-menos aria-label="Una persona menos" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-menos"/></svg></button>
+            <input id="r-personas" name="personas" type="number" inputmode="numeric" min="1" max="30" value="2" required>
+            <button type="button" class="contador__btn" data-mas aria-label="Una persona más" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-mas"/></svg></button>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="r-area" data-i18n>Dónde</label>
+          <select id="r-area" name="area">
+            <option value="Donde haya espacio" data-i18n>Donde haya espacio</option>
+            <option value="En la arena, frente al agua" data-i18n>En la arena, frente al agua</option>
+            <option value="Bajo el techo de cana" data-i18n>Bajo el techo de cana</option>
+          </select>
+        </div>
+      </div>
+      <div class="campo">
+        <label for="r-ocasion" data-i18n>Ocasión</label>
+        <select id="r-ocasion" name="ocasion">
+          <option value="" data-i18n>Ninguna en especial</option>
+          <option value="Ver el atardecer" data-i18n>Ver el atardecer</option>
+          <option value="Cumpleaños" data-i18n>Cumpleaños</option>
+          <option value="Aniversario" data-i18n>Aniversario</option>
+          <option value="Pedida de mano" data-i18n>Pedida de mano</option>
+          <option value="Grupo de excursión" data-i18n>Grupo de excursión</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="r-nombre" data-i18n>Nombre</label>
+        <input id="r-nombre" name="nombre" type="text" autocomplete="name" required maxlength="60" aria-describedby="r-nombre-error">
+        <p class="campo__error" id="r-nombre-error" aria-live="polite"></p>
+      </div>
+      <div class="campo">
+        <label for="r-notas"><span data-i18n>Notas</span> <span class="campo__opcional" data-i18n>(opcional)</span></label>
+        <textarea id="r-notas" name="notas" rows="2" maxlength="300" placeholder="Alergias, silla para bebé, una sorpresa…" data-i18n-attr="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="dialogo__pie">
+      <button class="boton boton--whatsapp boton--ancho" type="submit"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n>Enviar por WhatsApp</span></button>
+      <p class="dialogo__nota"><span data-i18n>¿Prefieres llamar?</span> <a href="tel:{{tel}}">{{tel_texto}}</a></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="visor" id="visor" aria-label="Galería de fotos" data-i18n-attr="aria-label">
+  <figure class="visor__figura">
+    <img class="visor__img" alt="" data-visor-img>
+    <figcaption class="visor__pie"><span data-visor-texto></span> <span class="visor__cuenta" data-visor-cuenta></span></figcaption>
+  </figure>
+  <button class="visor__btn visor__btn--cerrar" type="button" data-cerrar aria-label="Cerrar" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+  <button class="visor__btn visor__btn--ant" type="button" data-visor-ant aria-label="Foto anterior" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-izq"/></svg></button>
+  <button class="visor__btn visor__btn--sig" type="button" data-visor-sig aria-label="Foto siguiente" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-der"/></svg></button>
+</dialog>
+
+<div class="aviso" role="status" aria-live="polite" data-aviso></div>

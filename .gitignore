@@ -1,0 +1,9 @@
+# Sistema
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
+# Herramientas locales
+.claude/settings.local.json
+tools/i18n-faltantes.txt

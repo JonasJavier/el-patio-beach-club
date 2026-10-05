@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es-DO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{titulo}}</title>
+<meta name="description" content="{{descripcion}}">
+<!-- Propuesta: no indexar para no competir con la presencia oficial. Ver README para quitarlo. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="{{canonical}}">
+<meta name="theme-color" content="#0A2E3B">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="El Patio Beach Club">
+<meta property="og:title" content="{{og_titulo}}">
+<meta property="og:description" content="{{descripcion}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{site_url}}/assets/img/og-image.jpg">
+<meta property="og:image:secure_url" content="{{site_url}}/assets/img/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Atardecer sobre la bahía de Bayahíbe con barcos fondeados, el logo de El Patio Beach Club y el texto «El atardecer de Bayahíbe se ve desde tu mesa».">
+<meta property="og:locale" content="es_DO">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{og_titulo}}">
+<meta name="twitter:description" content="{{descripcion}}">
+<meta name="twitter:image" content="{{site_url}}/assets/img/og-image.jpg">
+<meta name="twitter:image:alt" content="Atardecer sobre la bahía de Bayahíbe con barcos fondeados y el logo de El Patio Beach Club.">
+<link rel="preload" href="/assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/gloock-latin.woff2" as="font" type="font/woff2" crossorigin>
+{{preload}}
+<link rel="stylesheet" href="/assets/css/styles.css?v={{v:css/styles.css}}">
+<script>(function(){try{var q=new URLSearchParams(location.search).get("lang");if(q==="en"||q==="es"){localStorage.setItem("patio-lang",q)}var l=q||localStorage.getItem("patio-lang");if(l==="en"){document.documentElement.lang="en";document.documentElement.classList.add("i18n-cargando")}}catch(e){}document.documentElement.classList.add("js")})();</script>
+<script src="/assets/js/config.js?v={{v:js/config.js}}" defer></script>
+<script src="/assets/js/main.js?v={{v:js/main.js}}" data-i18n-src="/assets/js/i18n-en.js?v={{v:js/i18n-en.js}}" defer></script>
+{{scripts}}
+{{jsonld}}
+</head>

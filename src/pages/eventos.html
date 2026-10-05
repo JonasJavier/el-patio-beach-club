@@ -1,0 +1,135 @@
+---
+titulo: Eventos · El Patio Beach Club, Bayahíbe
+og_titulo: Eventos frente al mar · El Patio Beach Club
+descripcion: Cumpleaños, cenas de empresa, fiestas temáticas y grupos de excursión en la playa de Bayahíbe. Cotiza tu evento en El Patio Beach Club por WhatsApp.
+ruta: /eventos/
+salida: eventos/index.html
+pagina: eventos
+preload: evento-cena-blanca|(min-width: 1024px) 45vw, 100vw|all
+---
+{{> head}}
+<body class="pagina-eventos">
+{{> header}}
+<main id="contenido">
+
+  <section class="pagina-hero" aria-labelledby="ev-titulo">
+    <div class="wrap pagina-hero__rejilla">
+      <div class="pagina-hero__texto">
+        <p class="ceja ceja--sol" data-i18n>Eventos</p>
+        <h1 class="titulo-pagina" id="ev-titulo" data-i18n>Celebra con los pies en la arena</h1>
+        <p data-i18n>Cumpleaños, aniversarios, la cena de la empresa o una fiesta temática como la cena blanca. Te ayudamos con el espacio, el menú y la hora, para que la foto del grupo salga con el atardecer.</p>
+        <div class="hero__ctas">
+          <a class="boton boton--accion" href="#cotizar"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n>Cotizar mi evento</span></a>
+          <a class="boton boton--contorno-claro" href="https://wa.me/{{wa}}" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+        </div>
+      </div>
+      <figure class="pagina-hero__foto">
+        {{img nombre="evento-cena-blanca" alt="Cena de evento con invitados vestidos de blanco, mesas largas bajo los árboles y luces." sizes="(min-width: 1024px) 45vw, 100vw" prioridad}}
+        <figcaption data-i18n>Cena blanca en El Patio.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="seccion seccion--espuma" aria-labelledby="tipos-titulo">
+    <div class="wrap">
+      <div class="encabezado">
+        <p class="ceja" data-i18n>Para qué</p>
+        <h2 class="titulo" id="tipos-titulo" data-i18n>Eventos que se hacen aquí</h2>
+      </div>
+      <ul class="tipos">
+        <li class="tipo"><h3 data-i18n>Cumpleaños y aniversarios</h3><p data-i18n>Mesa larga frente al agua, bizcocho a la hora del atardecer y brindis con la bahía de fondo.</p></li>
+        <li class="tipo"><h3 data-i18n>Cenas de empresa</h3><p data-i18n>Menú servido o buffet para el equipo, en la arena y con la bahía de fondo.</p></li>
+        <li class="tipo"><h3 data-i18n>Fiestas temáticas</h3><p data-i18n>Como la cena blanca: mesas vestidas, luces entre los árboles y música para la noche.</p></li>
+        <li class="tipo"><h3 data-i18n>Grupos de excursión</h3><p data-i18n>Al volver de Saona o Catalina, almuerzo o cena para el grupo en la misma bahía.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion seccion--arena" aria-labelledby="formato-titulo">
+    <div class="wrap formato">
+      <div class="formato__texto">
+        <p class="ceja" data-i18n>Cómo se sirve</p>
+        <h2 class="titulo" id="formato-titulo" data-i18n>Buffet, menú servido o picadera</h2>
+        <p data-i18n>Para grupos grandes funciona el buffet; para cenas más íntimas, el menú servido con paella de mariscos o pescado del día. Y para empezar, canapés al centro.</p>
+      </div>
+      <div class="formato__fotos">
+        <figure>{{img nombre="buffet-evento" alt="Bandejas de buffet con ensaladas y pasta en un evento en El Patio." sizes="(min-width: 1024px) 24vw, 50vw"}}<figcaption data-i18n>Buffet</figcaption></figure>
+        <figure>{{img nombre="canapes" alt="Torre de canapés para un evento." sizes="(min-width: 1024px) 24vw, 50vw"}}<figcaption data-i18n>Canapés</figcaption></figure>
+        <figure>{{img nombre="paella-mariscos" alt="Paella de mariscos con langosta, camarones y mejillones en la paellera." sizes="(min-width: 1024px) 24vw, 50vw"}}<figcaption data-i18n>Paella para el grupo</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--espuma" id="cotizar" aria-labelledby="cotizar-titulo">
+    <div class="wrap dos-columnas">
+      <div class="dos-columnas__intro">
+        <p class="ceja" data-i18n>Cómo funciona</p>
+        <h2 class="titulo" id="cotizar-titulo" data-i18n>Cotiza en tres pasos</h2>
+        <ol class="pasos">
+          <li><strong data-i18n>Cuéntanos el plan.</strong> <span data-i18n>Fecha, cuántos son y qué celebran.</span></li>
+          <li><strong data-i18n>Te proponemos.</strong> <span data-i18n>Espacio, hora y menú según tu presupuesto.</span></li>
+          <li><strong data-i18n>Confirmas.</strong> <span data-i18n>Te guardamos el espacio y llegas a celebrar.</span></li>
+        </ol>
+        <p class="pasos__sol" data-fecha-evento-sol></p>
+      </div>
+      <form class="form form--tarjeta" novalidate data-form-evento>
+        <div class="form__fila">
+          <div class="campo">
+            <label for="e-tipo" data-i18n>Tipo de evento</label>
+            <select id="e-tipo" name="tipo">
+              <option value="Cumpleaños" data-i18n>Cumpleaños</option>
+              <option value="Aniversario" data-i18n>Aniversario</option>
+              <option value="Cena de empresa" data-i18n>Cena de empresa</option>
+              <option value="Fiesta temática" data-i18n>Fiesta temática</option>
+              <option value="Grupo de excursión" data-i18n>Grupo de excursión</option>
+              <option value="Otro" data-i18n>Otro</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="e-fecha" data-i18n>Fecha</label>
+            <input id="e-fecha" name="fecha" type="date" required aria-describedby="e-fecha-error">
+            <p class="campo__error" id="e-fecha-error" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="form__fila">
+          <div class="campo">
+            <label for="e-personas" data-i18n>Personas</label>
+            <input id="e-personas" name="personas" type="number" inputmode="numeric" min="2" max="300" value="15" required aria-describedby="e-personas-error">
+            <p class="campo__error" id="e-personas-error" aria-live="polite"></p>
+          </div>
+          <div class="campo">
+            <label for="e-momento" data-i18n>Momento</label>
+            <select id="e-momento" name="momento">
+              <option value="Almuerzo" data-i18n>Almuerzo</option>
+              <option value="Atardecer" selected data-i18n>Atardecer</option>
+              <option value="Cena" data-i18n>Cena</option>
+            </select>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="e-formato" data-i18n>Formato</label>
+          <select id="e-formato" name="formato">
+            <option value="Recomiéndenme" data-i18n>Recomiéndenme</option>
+            <option value="Buffet" data-i18n>Buffet</option>
+            <option value="Menú servido" data-i18n>Menú servido</option>
+            <option value="Picadera y bebidas" data-i18n>Picadera y bebidas</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="e-nombre" data-i18n>Nombre</label>
+          <input id="e-nombre" name="nombre" type="text" autocomplete="name" required maxlength="60" aria-describedby="e-nombre-error">
+          <p class="campo__error" id="e-nombre-error" aria-live="polite"></p>
+        </div>
+        <div class="campo">
+          <label for="e-detalles"><span data-i18n>Detalles</span> <span class="campo__opcional" data-i18n>(opcional)</span></label>
+          <textarea id="e-detalles" name="detalles" rows="3" maxlength="400" placeholder="Presupuesto por persona, decoración, música…" data-i18n-attr="placeholder"></textarea>
+        </div>
+        <button class="boton boton--whatsapp boton--ancho" type="submit"><svg class="icono" aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n>Pedir cotización por WhatsApp</span></button>
+      </form>
+    </div>
+  </section>
+
+</main>
+{{> footer}}
+</body>
+</html>

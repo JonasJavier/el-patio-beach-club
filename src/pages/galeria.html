@@ -1,0 +1,39 @@
+---
+titulo: Galería · El Patio Beach Club, Bayahíbe
+og_titulo: Fotos de El Patio Beach Club
+descripcion: Atardeceres sobre la bahía de Bayahíbe, mesas en la arena, paella, langosta y eventos: fotos de El Patio Beach Club.
+ruta: /galeria/
+salida: galeria/index.html
+pagina: galeria
+---
+{{> head}}
+<body class="pagina-galeria">
+{{> header}}
+<main id="contenido">
+  <section class="carta-cabeza" aria-labelledby="gal-titulo">
+    <div class="wrap carta-cabeza__fila">
+      <div class="carta-cabeza__texto">
+        <p class="ceja ceja--sol" data-i18n>Galería</p>
+        <h1 class="titulo-pagina" id="gal-titulo" data-i18n>Atardeceres, playa y platos</h1>
+        <p data-i18n>Fotos del restaurante y de su Instagram. Toca cualquiera para verla en grande.</p>
+      </div>
+    </div>
+  </section>
+  <section class="seccion seccion--espuma galeria-pagina" aria-label="Fotos" data-i18n-attr="aria-label">
+    <div class="wrap">
+      <div class="chips chips--galeria" role="group" aria-label="Filtrar fotos" data-i18n-attr="aria-label" data-galeria-filtros>
+        <button class="chip" type="button" aria-pressed="true" data-filtro="todo" data-i18n>Todo</button>
+        <button class="chip" type="button" aria-pressed="false" data-filtro="atardecer" data-i18n>Atardeceres</button>
+        <button class="chip" type="button" aria-pressed="false" data-filtro="playa" data-i18n>La playa</button>
+        <button class="chip" type="button" aria-pressed="false" data-filtro="platos" data-i18n>Platos</button>
+        <button class="chip" type="button" aria-pressed="false" data-filtro="eventos" data-i18n>Eventos</button>
+      </div>
+      <ul class="mosaico mosaico--completo" data-galeria>
+        {{galeria ids="atardecer-bahia,paella-mariscos,mesas-frente-al-mar,langosta-parrilla,bahia-barcos,copas-atardecer,pescado-frito,playa-tumbonas,evento-cena-blanca,calamares-fritos,atardecer-barcos,mariscos-noche,mesa-vista-mar,paella-plato,almuerzo-junto-al-agua,buffet-evento,mariscos-plato,canapes"}}
+      </ul>
+    </div>
+  </section>
+</main>
+{{> footer}}
+</body>
+</html>

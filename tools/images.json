@@ -1,0 +1,219 @@
+{
+ "atardecer-bahia": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1440
+  ],
+  "w": 1440,
+  "h": 806,
+  "ratio": 1.7866,
+  "origen": "instagram/atardecer-bahia.webp"
+ },
+ "atardecer-bahia-movil": {
+  "anchos": [
+   480,
+   800,
+   1152
+  ],
+  "w": 1152,
+  "h": 1440,
+  "ratio": 0.8,
+  "origen": "instagram/atardecer-bahia.webp"
+ },
+ "bahia-barcos": {
+  "anchos": [
+   480,
+   640
+  ],
+  "w": 640,
+  "h": 1136,
+  "ratio": 0.5634,
+  "origen": "instagram/bahia-barcos-vertical.jpg"
+ },
+ "mesas-frente-al-mar": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1428
+  ],
+  "w": 1428,
+  "h": 747,
+  "ratio": 1.9116,
+  "origen": "instagram/mesas-frente-al-mar.jpg"
+ },
+ "evento-cena-blanca": {
+  "anchos": [
+   480,
+   800,
+   1071
+  ],
+  "w": 1071,
+  "h": 1339,
+  "ratio": 0.7999,
+  "origen": "instagram/evento-cena-blanca.jpg"
+ },
+ "buffet-evento": {
+  "anchos": [
+   480,
+   648
+  ],
+  "w": 648,
+  "h": 675,
+  "ratio": 0.96,
+  "origen": "instagram/terraza-techo-cana.jpg"
+ },
+ "paella-mariscos": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 2000,
+  "h": 1333,
+  "ratio": 1.5004,
+  "origen": "tripadvisor/ta-0e-31-d9-55-la-paella-de-masrisco.jpg"
+ },
+ "paella-plato": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536,
+  "h": 1536,
+  "ratio": 1.0,
+  "origen": "tripadvisor/ta-16-28-bb-ad-photo1jpg.jpg"
+ },
+ "langosta-parrilla": {
+  "anchos": [
+   480,
+   800,
+   1003
+  ],
+  "w": 1003,
+  "h": 1500,
+  "ratio": 0.6687,
+  "origen": "tripadvisor/ta-0b-01-de-01-el-patio-lounge-bar.jpg"
+ },
+ "calamares-fritos": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 2000,
+  "h": 1337,
+  "ratio": 1.4959,
+  "origen": "tripadvisor/ta-0b-01-dd-c7-el-patio-lounge-bar.jpg"
+ },
+ "pescado-frito": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1440
+  ],
+  "w": 1440,
+  "h": 1440,
+  "ratio": 1.0,
+  "origen": "tripadvisor/ta-27-f3-8e-43-caption.jpg"
+ },
+ "mariscos-noche": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536,
+  "h": 1638,
+  "ratio": 0.9377,
+  "origen": "tripadvisor/ta-16-28-bb-ac-photo0jpg.jpg"
+ },
+ "mariscos-plato": {
+  "anchos": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1200,
+  "h": 1200,
+  "ratio": 1.0,
+  "origen": "tripadvisor/ta-27-f3-8e-44-caption.jpg"
+ },
+ "copas-atardecer": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 2000,
+  "h": 1333,
+  "ratio": 1.5004,
+  "origen": "tripadvisor/ta-0e-31-d9-88-impresionante-puesta.jpg"
+ },
+ "atardecer-barcos": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1440
+  ],
+  "w": 1440,
+  "h": 1440,
+  "ratio": 1.0,
+  "origen": "tripadvisor/ta-27-f3-8e-45-caption.jpg"
+ },
+ "playa-tumbonas": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 2000,
+  "h": 1333,
+  "ratio": 1.5004,
+  "origen": "tripadvisor/ta-0e-31-d9-40-vista-impresionante.jpg"
+ },
+ "mesa-vista-mar": {
+  "anchos": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536,
+  "h": 1024,
+  "ratio": 1.5,
+  "origen": "tripadvisor/ta-0a-83-f6-f7-creaciones-del-el-patio.jpg"
+ },
+ "almuerzo-junto-al-agua": {
+  "anchos": [
+   480,
+   800,
+   1090
+  ],
+  "w": 1090,
+  "h": 1500,
+  "ratio": 0.7267,
+  "origen": "tripadvisor/ta-0b-01-dc-bc-el-patio-lounge-bar.jpg"
+ },
+ "canapes": {
+  "anchos": [
+   480,
+   720
+  ],
+  "w": 720,
+  "h": 896,
+  "ratio": 0.8036,
+  "origen": "tripadvisor/ta-0a-83-f6-f0-creaciones-del-el-patio.jpg"
+ }
+}

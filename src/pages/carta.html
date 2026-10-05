@@ -1,0 +1,80 @@
+---
+titulo: La carta · El Patio Beach Club, Bayahíbe
+og_titulo: La carta de El Patio Beach Club
+descripcion: Paella de mariscos, langosta a la parrilla, pescado frito entero, calamares y cócteles. La carta de El Patio Beach Club, en la playa de Bayahíbe, con precios en pesos y dólares.
+ruta: /carta/
+salida: carta/index.html
+pagina: carta
+scripts: menu
+---
+{{> head}}
+<body class="pagina-carta">
+{{> header}}
+<main id="contenido" class="carta">
+
+  <section class="carta-cabeza" aria-labelledby="carta-titulo">
+    <div class="wrap carta-cabeza__fila">
+      <div class="carta-cabeza__texto">
+        <p class="ceja ceja--sol" data-i18n>La carta</p>
+        <h1 class="titulo-pagina" id="carta-titulo" data-i18n>Lo que sale del mar, a la mesa</h1>
+        <p data-i18n>Mariscos, pescado del día y cócteles para la tarde en la arena. Precios en pesos dominicanos, con su equivalente aproximado en dólares.</p>
+        {{nota_precios}}
+      </div>
+      <div class="carta-cabeza__acciones">
+        <p class="estado estado--claro" data-estado><span class="estado__punto" aria-hidden="true"></span><span class="estado__texto" data-estado-texto>Abierto todos los días</span></p>
+        <button class="boton boton--contorno-claro" type="button" data-imprimir><svg class="icono" aria-hidden="true"><use href="#i-imprimir"/></svg><span data-i18n>Imprimir carta</span></button>
+      </div>
+    </div>
+  </section>
+
+  <aside class="carta-impresa" aria-hidden="true">
+    <div class="carta-impresa__qr">{{qr_carta}}</div>
+    <p><strong>El Patio Beach Club</strong> · {{calle}}, Bayahíbe · <span class="sin-corte">WhatsApp {{tel_texto}}</span></p>
+    <p data-i18n>Escanea para ver la carta en tu teléfono y reservar.</p>
+  </aside>
+
+  <div class="carta-herramientas">
+    <div class="wrap carta-herramientas__fila">
+      <div class="buscador">
+        <svg class="icono buscador__icono" aria-hidden="true"><use href="#i-buscar"/></svg>
+        <label class="sr-only" for="buscar-plato" data-i18n>Buscar en la carta</label>
+        <input id="buscar-plato" type="search" autocomplete="off" placeholder="Busca un plato: langosta, paella…" data-i18n-attr="placeholder" data-buscar>
+        <button class="buscador__limpiar" type="button" aria-label="Borrar búsqueda" data-i18n-attr="aria-label" data-limpiar hidden><svg class="icono" aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+      </div>
+      <div class="chips" role="group" aria-label="Filtrar la carta" data-i18n-attr="aria-label" data-filtros>
+        <button class="chip" type="button" aria-pressed="true" data-filtro="todos" data-i18n>Todo</button>
+        <button class="chip" type="button" aria-pressed="false" data-filtro="popular" data-i18n>Lo más pedido</button>
+        <button class="chip" type="button" aria-pressed="false" data-filtro="del-mar" data-i18n>Del mar</button>
+        <button class="chip" type="button" aria-pressed="false" data-filtro="compartir" data-i18n>Para compartir</button>
+        <button class="chip" type="button" aria-pressed="false" data-filtro="veg" data-i18n>Vegetariano</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="categorias" aria-label="Categorías de la carta" data-i18n-attr="aria-label" data-categorias-nav>
+    <div class="wrap categorias__fila">
+      <button class="categorias__flecha" type="button" data-cat-ant aria-label="Categorías anteriores" data-i18n-attr="aria-label"><svg class="icono" aria-hidden="true"><use href="#i-izq"/></svg><span class="categorias__flecha-txt" data-i18n>Anterior</span></button>
+      <div class="categorias__pista" data-cat-pista>
+        {{carta_categorias}}
+      </div>
+      <button class="categorias__flecha" type="button" data-cat-sig aria-label="Más categorías" data-i18n-attr="aria-label"><span class="categorias__flecha-txt" data-i18n>Siguiente</span><svg class="icono" aria-hidden="true"><use href="#i-der"/></svg></button>
+    </div>
+  </nav>
+
+  <div class="wrap carta-cuerpo">
+    <p class="carta-resumen" aria-live="polite" data-carta-resumen></p>
+    {{carta_completa}}
+    <div class="carta-vacia" data-carta-vacia hidden>
+      <p class="carta-vacia__titulo" data-i18n>No encontramos ese plato.</p>
+      <p data-i18n>Prueba con otra palabra, como «langosta», «paella» o «pescado».</p>
+      <button class="boton boton--contorno" type="button" data-ver-todo data-i18n>Ver toda la carta</button>
+    </div>
+    <div class="carta-reserva">
+      <p data-i18n>¿Vienes para el atardecer? Reserva y te guardamos una mesa en la arena.</p>
+      <button class="boton boton--accion" type="button" data-reservar-atardecer><svg class="icono" aria-hidden="true"><use href="#i-sol"/></svg><span data-i18n>Reservar para el atardecer</span></button>
+    </div>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>
